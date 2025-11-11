@@ -34,15 +34,19 @@ const Sidebar: FC<SidebarProps> = ({ className }) => {
                 {collapsed ? '>' : '<'}
             </Button>
             <div className={cls.items}>
-                <AppLink to={RoutePath.main} theme={AppLinkTheme.SECONDARY} className={cls.item}>
+                <AppLink
+                    theme={AppLinkTheme.SECONDARY}
+                    to={RoutePath.main}
+                    className={cls.item}
+                >
                     <MainIcon className={cls.icon} />
                     <span className={cls.link}>
                         {t('Главная страница')}
                     </span>
                 </AppLink>
                 <AppLink
-                    to={RoutePath.about}
                     theme={AppLinkTheme.SECONDARY}
+                    to={RoutePath.about}
                     className={cls.item}
                 >
                     <AboutIcon className={cls.icon} />
